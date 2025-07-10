@@ -1,0 +1,33 @@
+# Meshtastic MQTT消息示例
+
+## 示例1: 文本消息 "1"
+```
+Topic: msh/CN/2/e/ShortSlow/!849c57c0
+Message: 0a25 0dc0 579c 8415 ffff ffff 2205 0801 1201 3135 4b9f de24 3d95 846f 6848 0358 6478 0398 01c0 0112 0953 686f 7274 536c 6f77 1a09 2138 3439 6335 3763 30
+PSK: AQ== (PSK #1)
+Expected Content: "1"
+```
+
+## 示例2: 其他可能的消息格式
+```
+# 如果你有其他MQTT消息，可以添加在这里
+# 格式：
+# Topic: xxx
+# Message: hex数据
+# PSK: xxx
+# Expected Content: xxx
+```
+
+## 使用方法
+
+1. 启动 mqtt_decoder.exe
+2. 复制上述Message行中的hex数据
+3. 粘贴到程序中
+4. 输入PSK信息 (如AQ==)
+5. 查看解析结果
+
+## 注意事项
+
+- hex数据可以包含空格，程序会自动处理
+- PSK #1 对应 AQ== (Base64格式)
+- 加密数据需要使用正确的PSK才能解密 
